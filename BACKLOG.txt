@@ -1,0 +1,17 @@
+PixelRoll backlog
+
+Timing: revisit these items after the main features are complete and backlog work begins.
+
+Noise reduction — reported after 0.13
+The luminance and color noise controls do not produce useful improvement in real photos.
+Revisit the processing approach and slider strength using representative noisy NEF and DNG files.
+Compare before/after at 100% for visible noise reduction while preserving fine detail and edges.
+Do not treat the current controls as finished noise reduction.
+
+Accessibility activation crash — observed while verifying 0.16
+A programmatic accessibility press on a SwiftUI button crashed inside
+MainActor.assumeIsolated / SwiftUI ButtonAction.callAsFunction on this Mac.
+Normal pointer activation of the same export button completed successfully.
+A similar diagnostic report exists from 0.14. Investigate accessibility activation
+and validate with VoiceOver before publishing the beta; do not assume this is
+an export-renderer failure. Diagnostic: PixelRoll-2026-11-01-144912.ips.

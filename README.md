@@ -4,7 +4,7 @@ PixelRoll is a native macOS photo library and RAW editor inspired by Apple Apert
 
 ## Public beta
 
-PixelRoll 0.18 is planned as the first public beta. An installer has not been published yet. The steps below describe how to install it once it appears on the [GitHub Releases page](https://github.com/BillsWorkbench/PixelRoll/releases).
+PixelRoll 0.16 is available as a public beta. Download **PixelRoll-0.16.dmg** from the [0.16 release](https://github.com/BillsWorkbench/PixelRoll/releases/tag/v0.16).
 
 The initial beta will use the free distribution route: it will not have an Apple Developer ID signature or Apple notarization. macOS may block the first launch until you approve this specific app.
 
@@ -46,3 +46,12 @@ Finish saving your edits and quit PixelRoll. Download the newer installer, then 
 ## Report a problem
 
 Open a [GitHub issue](https://github.com/BillsWorkbench/PixelRoll/issues) with the PixelRoll version, macOS version, Mac model, photo format/camera model, and steps to reproduce the problem. Include the exact error message or a screenshot when useful. Avoid posting private photos or personal metadata.
+
+
+## 0.16 beta notes
+
+Publish exports JPEG, TIFF and HEIF with current adjustments and crops, output sizing, color profiles, duplicate handling and batch cancellation. TIFF output is currently 8-bit. Printing is not enabled yet.
+
+Known issues: noise reduction needs further improvement. An accessibility-driven SwiftUI button activation crashed during automated testing; normal mouse-driven export passed. Accessibility activation needs further investigation.
+
+Validation: 62 automated checks passed, including Nikon NEF and Leica DNG exports.

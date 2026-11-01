@@ -1,0 +1,28 @@
+PixelRoll planned releases
+
+0.16 — Export and first public beta after user testing
+Enable Publish export for selected photos with adjustments and crops applied.
+JPEG, TIFF and HEIF; output sizing, quality/profile choices, destination selection,
+duplicate filename handling, progress and cancellation.
+Build for Bill to test first. Publish 0.16 to GitHub only after his testing approval.
+Move the free DMG packaging and public installation verification to that publication step.
+Update the GitHub README to the actual 0.16 download when the release is published.
+
+0.17 — Printing
+Enable single-photo printing and contact sheets, with page setup and layout controls.
+
+Public beta distribution checklist (first applied to 0.16 after testing)
+Publish a versioned GitHub prerelease for BillsWorkbench/PixelRoll after Bill approves the test build.
+Package PixelRoll in a disk image with drag-to-Applications installation.
+Use free distribution for the initial public beta: ad hoc signing, no Developer ID or notarization.
+Document the per-app macOS Privacy & Security approval procedure in README.md.
+Developer ID signing and notarization are optional future distribution improvements, not prerequisites.
+Test the downloaded installer on a separate Mac/user account.
+Document supported macOS versions, processor requirements, RAW limitations, installation,
+updates, sidecar portability, known issues and how testers can report problems.
+Review the distribution license against the user's existing requirement: professional
+photo use is permitted, but resale of PixelRoll itself is restricted.
+Automate repeatable build, verification and packaging steps; keep credentials out of Git.
+Attach the installer, release notes and checksum to the GitHub prerelease.
+
+After main features and public-beta preparation: tackle BACKLOG.txt, including noise reduction.

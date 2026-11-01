@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+cd "$(dirname "$0")/.."
+pixelroll_check_dir=$(mktemp -d "${TMPDIR:-/tmp}/pixelroll-check.XXXXXX")
+trap 'rm -rf "$pixelroll_check_dir"' EXIT
+xcrun swiftc -parse-as-library PixelRoll/PhotoLibrary.swift PixelRoll/PhotoFolder.swift PixelRoll/PhotoDiskCache.swift PixelRoll/PhotoMetadataIndex.swift PixelRoll/ThumbnailService.swift PixelRoll/PreviewService.swift PixelRoll/DevelopRenderer.swift PixelRoll/DevelopEffects.swift PixelRoll/PhotoExport.swift PixelRoll/ExportController.swift PixelRoll/AdjustedThumbnailService.swift PixelRoll/PhotoSelection.swift PixelRoll/LibrarySession.swift PixelRoll/LibraryWorkspace.swift PixelRoll/LibraryModel.swift PixelRoll/PhotoNotes.swift PixelRoll/PhotoAdjustments.swift PixelRoll/PhotoCurves.swift PixelRoll/PhotoCrop.swift PixelRoll/KeywordChanges.swift PixelRoll/PendingNotes.swift PixelRoll/SaveFailure.swift PixelRoll/FolderRenamer.swift PixelRoll/LibraryWatcher.swift PixelRoll/LibraryChanges.swift PixelRoll/PhotoOrdering.swift PixelRoll/SearchIndex.swift PixelRoll/PhotoMetadata.swift Checks/PhotoLibraryChecks.swift Checks/Release09Checks.swift Checks/ReliabilityChecks.swift Checks/DevelopChecks.swift Checks/AdjustmentChecks.swift Checks/Release12Checks.swift Checks/Release13Checks.swift Checks/Release14Checks.swift Checks/Release15Checks.swift Checks/Release16Checks.swift -o "$pixelroll_check_dir/check"
+PIXELROLL_CACHE_DIRECTORY="$pixelroll_check_dir/cache" "$pixelroll_check_dir/check"
